@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2e8d7">
+  <title>Coral — Design de Serviço</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root{--sand:#f2e8d7;--paper:#fffdf8;--terracotta:#b96649;--coral:#fa8370;--sea:#5dacb1;--night:#263c52;--amber:#e5ad61;--green:#7b9271;--ink:#263c52;--muted:#65717a;--line:#ded8ca;--shadow:0 16px 45px #263c5213;--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--sand);color:var(--ink);font-family:var(--sans);line-height:1.58}a{color:inherit}.topbar{height:70px;position:sticky;top:0;z-index:20;background:#f2e8d7ee;backdrop-filter:blur(16px);border-bottom:1px solid #263c5215;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,72px)}.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}.logo-mark{width:27px;height:27px;border-radius:50% 50% 50% 8px;background:var(--coral);transform:rotate(-45deg);display:inline-block;position:relative}.logo-mark:after{content:'';width:7px;height:7px;border:2px solid var(--night);background:var(--sand);border-radius:50%;position:absolute;left:8px;top:8px}.topbar nav{display:flex;gap:6px;overflow:auto;scrollbar-width:none}.topbar nav a{text-decoration:none;font-size:12px;font-weight:600;color:#506172;padding:8px 11px;border-radius:99px;white-space:nowrap}.topbar nav a:hover,.topbar nav a.active{background:var(--night);color:white}.cover{min-height:650px;padding:90px clamp(24px,9vw,140px) 80px;display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 85% 20%,#5dacb123,transparent 33%),linear-gradient(135deg,#f7f0e4,var(--sand))}.cover:after{content:'';position:absolute;width:560px;height:560px;border:1px solid #5dacb166;border-radius:50%;right:-160px;bottom:-260px;box-shadow:0 0 0 35px #5dacb112,0 0 0 80px #5dacb10c}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--terracotta)}h1,h2,h3,p{margin-top:0}h1{font:600 clamp(48px,7vw,88px)/.98 var(--serif);letter-spacing:-.045em;max-width:720px;margin:20px 0}.cover .tagline{font:500 clamp(22px,3vw,32px)/1.25 var(--serif);color:var(--night);max-width:610px}.cover .subline{max-width:520px;color:var(--muted);font-size:16px}.cover-art{position:relative;min-height:410px;display:grid;place-items:center}.reef{width:min(390px,80vw);aspect-ratio:1;border-radius:47% 53% 58% 42%;background:linear-gradient(140deg,#5dacb1,#78b9b5 48%,#f5d7ad);box-shadow:inset -24px -28px 50px #263c5230,0 28px 65px #263c5220;transform:rotate(-8deg);position:relative;display:grid;place-items:center}.reef:before,.reef:after{content:'';position:absolute;border:1px solid #fff9;border-radius:50%;inset:10%;transform:rotate(25deg)}.reef:after{inset:20%;transform:rotate(-18deg)}.reef-word{font:700 clamp(50px,8vw,88px)/1 var(--sans);letter-spacing:-.08em;color:#dff4ec;text-shadow:2px 3px 0 var(--night);transform:rotate(8deg);z-index:1}.reef-pin{color:var(--coral);text-shadow:2px 3px var(--night)}.float-card{position:absolute;background:#fffdf8ed;border:1px solid #fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);font-size:13px}.float-card strong{display:block;font:600 18px var(--serif)}.fc-one{top:18%;left:0}.fc-two{right:0;bottom:18%}.cover-bottom{grid-column:1/-1;display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:15px;color:var(--muted);font-size:13px}.pill{display:inline-flex;border-radius:99px;padding:6px 11px;background:#fff9;color:var(--night);font-size:11px;font-weight:700;letter-spacing:.04em}.container{width:min(1180px,calc(100% - 40px));margin:0 auto}.section{padding:88px 0 94px;border-top:1px solid #263c5215}.section-head{display:grid;grid-template-columns:90px 1fr;gap:24px;align-items:start;margin-bottom:38px}.number{font:600 42px/1 var(--serif);color:var(--terracotta)}h2{font:600 clamp(36px,5vw,58px)/1.05 var(--serif);letter-spacing:-.035em;margin:0 0 12px}.section-intro{font-size:17px;color:var(--muted);max-width:760px;margin:0}.grid{display:grid;gap:16px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--paper);border:1px solid #fff;border-radius:22px;padding:24px;box-shadow:var(--shadow)}.card h3{font:600 23px/1.12 var(--serif);margin:8px 0 10px}.card p{margin:0;color:#526273}.label{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);font-weight:700}.big-idea{background:var(--night);color:#fff;border-radius:26px;padding:34px clamp(24px,5vw,56px);margin:20px 0 18px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}.big-idea p{font:500 clamp(23px,3.5vw,37px)/1.25 var(--serif);margin:0;max-width:850px}.big-idea .side-mark{width:58px;height:58px;background:#ffffff15;border:1px solid #ffffff55;border-radius:50%;display:grid;place-items:center;color:var(--coral);font-size:26px}.accent-line{height:4px;width:70px;background:var(--coral);border-radius:5px;margin:16px 0}.problem-list{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.problem-list div{background:#ffffff90;border-radius:16px;padding:16px;font-size:14px}.problem-list b{display:block;color:var(--terracotta);font-size:13px;margin-bottom:4px}.persona{display:grid;grid-template-columns:.75fr 1.25fr;gap:22px;background:var(--night);color:white;border-radius:26px;padding:30px;margin-top:20px}.persona .avatar{min-height:245px;background:linear-gradient(145deg,#f0c9a5,#b96649);border-radius:20px;display:flex;align-items:end;padding:20px;color:#fff;position:relative;overflow:hidden}.avatar:before{content:'C';font:600 180px/.8 var(--serif);position:absolute;right:10px;top:2px;color:#fff5}.avatar span{position:relative;font-weight:600}.persona h3{font:600 32px var(--serif);margin:0 0 5px;color:white}.persona p{color:#e7edf1}.persona ul{padding-left:18px;margin:14px 0;color:#e7edf1}.persona li{margin:7px 0}.chips{display:flex;gap:8px;flex-wrap:wrap}.chips span{font-size:11px;border:1px solid #ffffff45;border-radius:99px;padding:6px 10px;color:#fff}.evidence{border-left:3px solid var(--sea);padding:2px 0 2px 15px;margin:16px 0}.evidence strong{display:block;color:var(--night)}.journey{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.journey .card{position:relative;overflow:hidden}.journey .card:before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--sea)}.journey .step{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--terracotta);text-transform:uppercase}.journey h3{margin-top:8px}.journey small{display:block;color:var(--muted);margin-top:10px}.quote{font:500 22px/1.3 var(--serif);color:var(--night);border-top:1px solid var(--line);padding-top:15px;margin-top:16px}.quad{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.quad .card{min-height:176px}.answer{font-size:15px;color:#4c5c69}.answer strong{color:var(--night)}.service-stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.service-stack span{border:1px solid #c5d6d0;background:#f9f7f0;border-radius:99px;padding:9px 13px;font-size:13px}.system-map{background:#e7ede8;border-radius:28px;padding:30px;overflow:hidden;position:relative}.map-actors{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:stretch}.actor{background:var(--paper);border:1px solid #d7e0dc;border-radius:18px;padding:18px 14px;min-height:142px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.actor .icon{width:40px;height:40px;border-radius:50%;background:#e4f2ef;display:grid;place-items:center;font-size:18px;color:var(--night);margin-bottom:10px}.actor strong{font:600 17px var(--serif)}.actor small{color:var(--muted);line-height:1.35;margin-top:4px}.map-core{margin:22px auto;max-width:600px;background:var(--night);color:white;text-align:center;border-radius:18px;padding:16px 20px;position:relative}.map-core strong{font:600 22px var(--serif)}.flow-lines{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.flow{background:#fff9;border-radius:14px;padding:14px;font-size:13px}.flow b{display:block;margin-bottom:5px}.flow.info b{color:#3c777c}.flow.money b{color:#a54d52}.flow.material b{color:#637c55}.map-note{font-size:12px;color:#5e6b69;margin:16px 0 0}.system-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;margin:16px 0}.system-legend span:before{content:'';display:inline-block;width:15px;height:3px;vertical-align:middle;margin-right:7px;background:var(--sea)}.system-legend .fin:before{background:#a54d52}.system-legend .mat:before{background:var(--green)}.blueprint{display:grid;gap:12px}.bp-card{display:grid;grid-template-columns:150px 1fr 1fr 1fr;gap:0;background:var(--paper);border:1px solid #fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.bp-stage{background:#e7f0eb;padding:18px}.bp-stage b{display:block;color:var(--terracotta);font-size:11px;letter-spacing:.1em;text-transform:uppercase}.bp-stage strong{display:block;font:600 20px/1.12 var(--serif);margin-top:6px}.bp-cell{padding:18px;border-left:1px solid var(--line);font-size:13px}.bp-cell span{display:block;font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--terracotta);margin-bottom:6px}.bp-cell p{margin:0;color:#50606b}.status{font-size:10px!important;color:#6e7b6d!important;margin-top:9px!important}.blueprint-head{display:grid;grid-template-columns:150px 1fr 1fr 1fr;gap:0;margin:0 0 7px;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.bp-insight{background:#f7dfcf;border-radius:18px;padding:18px 22px;margin-top:18px;color:#593e3b;font-size:14px}.bp-insight strong{color:#8c4a39}.story-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.story{background:var(--paper);border:1px solid white;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}.story img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#e9e1d5}.story .story-copy{padding:20px 22px}.story .story-n{font-size:10px;color:var(--terracotta);font-weight:700;letter-spacing:.16em;text-transform:uppercase}.story h3{font:600 23px/1.1 var(--serif);margin:7px 0}.story p{margin:0;color:#526273;font-size:14px}.story .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.story .meta span{font-size:10px;color:#5e706e;background:#e8f0ea;border-radius:99px;padding:5px 9px}.end-card{background:var(--night);color:#fff;border-radius:28px;padding:36px;margin-top:28px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px}.end-card h3{font:600 32px var(--serif);color:white;margin-bottom:7px}.end-card p{color:#e3e9ec;margin:0;max-width:730px}.end-card .coral-dot{width:90px;height:90px;border-radius:50%;background:var(--coral);box-shadow:inset 0 0 0 10px #fff2;display:grid;place-items:center;color:var(--night);font-size:32px}.sources{padding:54px 0 80px;border-top:1px solid #263c5215}.sources h2{font-size:34px}.source-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.source-list a,.source-list div{display:block;background:#fff9;border:1px solid #fff;border-radius:15px;padding:14px;text-decoration:none;font-size:13px}.source-list a:hover{background:white}.source-list small{display:block;color:var(--muted);margin-top:4px}.footer{padding:22px clamp(20px,5vw,72px);display:flex;justify-content:space-between;gap:15px;align-items:center;border-top:1px solid #263c5215;color:var(--muted);font-size:12px}.to-top{position:fixed;right:22px;bottom:22px;z-index:15;width:45px;height:45px;border:0;border-radius:50%;background:var(--terracotta);color:white;font-size:20px;box-shadow:var(--shadow);cursor:pointer}.small-note{font-size:12px;color:var(--muted);margin-top:18px}
+    @media(max-width:900px){.topbar{align-items:flex-start;height:auto;min-height:64px;padding-top:13px;padding-bottom:10px;gap:12px}.topbar nav{max-width:76vw}.cover{grid-template-columns:1fr;padding-top:70px}.cover-art{min-height:330px;grid-row:2}.cover-bottom{grid-row:3}.grid.four{grid-template-columns:repeat(2,1fr)}.map-actors{grid-template-columns:repeat(3,1fr)}.blueprint-head{display:none}.bp-card{grid-template-columns:135px 1fr}.bp-stage{grid-row:span 3}.bp-cell{border-left:1px solid var(--line);border-top:1px solid var(--line)}.bp-cell:first-of-type{border-top:0}.source-list{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){.topbar{display:block}.brand{margin-bottom:8px}.topbar nav{max-width:100%;margin:0 -5px}.topbar nav a{font-size:11px;padding:7px 9px}.cover{min-height:auto;padding:56px 22px 40px}.cover-art{min-height:270px}.reef{width:260px}.float-card{font-size:11px;padding:10px 12px}.fc-one{left:-4px}.fc-two{right:-4px}.container{width:min(100% - 30px,520px)}.section{padding:62px 0}.section-head{grid-template-columns:42px 1fr;gap:12px;margin-bottom:25px}.number{font-size:31px}.section-intro{font-size:15px}.grid.two,.grid.three,.grid.four,.journey,.quad,.story-grid{grid-template-columns:1fr}.card{padding:20px}.persona{grid-template-columns:1fr;padding:18px}.persona .avatar{min-height:170px}.problem-list{grid-template-columns:repeat(2,1fr)}.big-idea{grid-template-columns:1fr}.big-idea .side-mark{display:none}.map-actors{grid-template-columns:repeat(2,1fr)}.system-map{padding:16px}.flow-lines{grid-template-columns:1fr}.bp-card{grid-template-columns:1fr}.bp-stage{grid-row:auto}.bp-cell{border-left:0;padding:14px 18px}.bp-cell:first-of-type{border-top:1px solid var(--line)}.source-list{grid-template-columns:1fr}.end-card{grid-template-columns:1fr}.end-card .coral-dot{display:none}.footer{display:block}.footer span{display:block;margin:5px 0}}
+    @media print{.topbar,.to-top{display:none}.cover{min-height:0;padding:42px;break-after:page}.section{padding:36px 0;break-inside:avoid}.story,.card,.bp-card{box-shadow:none;break-inside:avoid}.container{width:100%}body{background:#fff}.story img{max-height:290px}}
+      /* Ajustes da capa: marca e cartões em áreas próprias, sem sobreposição. */
+    .cover-art{min-height:430px;display:block;}
+    .cover-art .reef{position:absolute;left:50%;bottom:4%;margin:0;width:min(350px,72%);transform:translateX(-50%) rotate(-8deg);}
+    .logo-plaque{top:7%;left:50%;transform:translateX(-50%);width:min(290px,66%);padding:16px 24px;}
+    .fc-one,.fc-two{top:auto;bottom:18%;width:min(225px,43%);min-height:86px;}
+    .fc-one{left:0;right:auto;}
+    .fc-two{right:0;left:auto;bottom:5%;}
+    @media(max-width:900px){.cover-art{min-height:400px}.cover-art .reef{width:min(330px,76%)}.fc-one,.fc-two{width:min(210px,44%)}}
+    @media(max-width:620px){.cover-art{min-height:330px}.logo-plaque{top:4%;width:68%;padding:12px 16px}.cover-art .reef{width:min(260px,75%);bottom:4%}.fc-one,.fc-two{bottom:9%;width:44%;min-height:76px;padding:10px;font-size:11px}.fc-one strong,.fc-two strong{font-size:15px}.fc-two{bottom:0}}
+      .blueprint-legend{display:flex;gap:18px;flex-wrap:wrap;margin:-12px 0 16px;font-size:12px;color:var(--muted)}
+    .blueprint-legend span{display:inline-flex;align-items:center;gap:7px}.legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block}.legend-dot.user{background:var(--terracotta)}.legend-dot.front{background:var(--sea)}.legend-dot.back{background:var(--night)}.legend-dot.partner{background:var(--amber)}
+    .blueprint-shell{overflow:auto;border-radius:24px;border:1px solid #fff;background:#fffdf8;padding:12px;box-shadow:var(--shadow)}
+    .blueprint-table{width:1800px;table-layout:fixed;border-collapse:separate;border-spacing:5px;color:var(--night);font-size:12px;line-height:1.4}
+    .blueprint-table th,.blueprint-table td{vertical-align:top;text-align:left;padding:12px;background:#fbf8f0;border-radius:10px}
+    .blueprint-table thead th{background:#e8f0eb}
+    .blueprint-table .row-label{width:172px;position:sticky;left:0;z-index:3;background:#263c52;color:#fff;vertical-align:middle;text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+    .blueprint-table thead .row-label{background:#263c52}
+    .phase-row th:not(.row-label){text-align:center;background:#263c52;color:#fff;border-radius:10px 10px 4px 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:10px}
+    .stage-row th{height:85px}.stage-row small{display:block;color:var(--terracotta);font-size:10px;letter-spacing:.12em;margin-bottom:5px}.stage-row strong{font:600 16px/1.12 var(--serif);display:block}
+    .blueprint-table tbody th{width:172px;position:sticky;left:0;z-index:2;background:#f2e8d7;font:600 13px/1.25 var(--serif);border-left:4px solid var(--sea)}
+    .blueprint-table .lane-user th{border-color:var(--terracotta)}.blueprint-table .lane-touch th{border-color:var(--sea)}.blueprint-table .lane-cost th{border-color:var(--amber)}.blueprint-table .lane-front th{border-color:#5dacb1}.blueprint-table .lane-back th{border-color:#263c52}.blueprint-table .lane-support th{border-color:#8ca69a}.blueprint-table .lane-local th{border-color:#dfaa63}.blueprint-table .lane-provider th{border-color:#b96649}
+    .blueprint-table td{height:auto}.blueprint-table td:empty{background:#f5f0e6}.blueprint-table ul{margin:0;padding-left:15px}.blueprint-table li{margin:0 0 7px}.blueprint-table li:last-child{margin-bottom:0}
+    .bp-pills{display:flex;flex-direction:column;align-items:flex-start;gap:6px}.bp-pills span{display:inline-block;background:#eaf1ee;padding:5px 9px;border-radius:99px;color:#465a64;font-size:11px}
+    .bp-boxes{display:grid;gap:6px}.bp-boxes span{display:block;padding:8px 9px;border:1px solid #d9d4c9;border-radius:8px;background:#fffdf8}
+    @media(max-width:620px){.blueprint-shell{margin:0 -10px;padding:8px;border-radius:16px}.blueprint-table{width:1740px}.blueprint-table th,.blueprint-table td{padding:10px}.blueprint-table .row-label,.blueprint-table tbody th{width:150px}}
+    @media print{.blueprint-shell{overflow:visible;box-shadow:none}.blueprint-table{width:100%;font-size:7px;border-spacing:2px}.blueprint-table th,.blueprint-table td{padding:5px}.blueprint-table .row-label,.blueprint-table tbody th{width:90px}.stage-row strong{font-size:10px}}
+  
+  </style>
+  <style>
+    .brand img{display:block;width:112px;height:auto;max-height:44px;object-fit:contain}
+    .logo-plaque{position:absolute;top:13%;left:50%;z-index:2;transform:translateX(-50%);width:min(300px,70%);padding:17px 24px;background:#f2e8d7;border:1px solid #ffffff;border-radius:20px;box-shadow:0 16px 38px #263c5220}
+    .logo-plaque img{display:block;width:100%;height:auto}
+    .cover-art .reef{margin-top:95px}
+    .cover .tagline{display:flex;align-items:center;gap:.12em;flex-wrap:wrap}
+    .logo-inline{display:inline-block;height:1em;width:auto;max-width:72px;object-fit:contain;vertical-align:-.18em;margin:0 .12em}
+    .logo-inline-large{height:1.5em;max-width:160px;vertical-align:-.26em;margin:0}
+    .subhead{font:600 27px/1.1 var(--serif);margin:38px 0 16px;color:var(--night)}
+    .stat-card strong{font:600 clamp(28px,3vw,39px)/1 var(--serif);color:var(--terracotta);display:block;margin:4px 0 14px}
+    .stat-card p{margin-bottom:14px}.stat-card small{display:block;color:var(--muted);font-size:11px;line-height:1.4}
+    .persona-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .persona-card{background:var(--paper);border:1px solid #fff;border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+    .persona-card h3{font:600 24px/1.12 var(--serif);margin:6px 0 12px;color:var(--night)}
+    .persona-card p{font-size:14px;color:#526273;margin-bottom:12px}
+    .persona-age{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta);font-weight:700}
+    .persona-card .chips span{color:var(--night);border-color:#b7d6d3;background:#eaf3ef}
+    .persona-selected{border:2px solid var(--terracotta);background:#fffaf3}
+    .persona-rationale{padding:18px 20px;background:#f7dfcf;border-radius:16px;color:#593e3b;margin:16px 0 28px}
+    .artifact-frame{border-radius:26px;overflow:hidden;background:#f8f2e7;border:1px solid #fff;box-shadow:var(--shadow);padding:clamp(14px,2.4vw,26px)}
+    .artifact-kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);font-weight:700;padding:0 2px 14px}
+    .system-map-direct img{display:block;width:100%;height:auto;border-radius:16px;background:#f8f2e7}
+    .system-map-direct figcaption{font-size:12px;color:var(--muted);padding:12px 2px 0}
+    .blueprint-direct{padding-bottom:18px}
+    .blueprint-direct iframe{display:block;width:100%;height:min(82vh,1050px);min-height:680px;border:0;border-radius:16px;background:#fff}
+    .artifact-fallback{font-size:12px;color:var(--muted);margin:12px 3px 0}.artifact-fallback a{color:var(--terracotta);font-weight:700}
+    @media(max-width:900px){.persona-grid{grid-template-columns:1fr}.blueprint-direct iframe{height:78vh;min-height:560px}}
+    @media(max-width:620px){.brand img{width:94px}.logo-plaque{top:8%;padding:12px 18px;width:76%}.cover-art .reef{margin-top:72px}.blueprint-direct iframe{min-height:520px}}
+    @media print{.artifact-frame{break-inside:avoid}.blueprint-direct iframe{height:850px}}
+      /* Ajustes da capa: marca e cartões em áreas próprias, sem sobreposição. */
+    .cover-art{min-height:430px;display:block;}
+    .cover-art .reef{position:absolute;left:50%;bottom:4%;margin:0;width:min(350px,72%);transform:translateX(-50%) rotate(-8deg);}
+    .logo-plaque{top:7%;left:50%;transform:translateX(-50%);width:min(290px,66%);padding:16px 24px;}
+    .fc-one,.fc-two{top:auto;bottom:18%;width:min(225px,43%);min-height:86px;}
+    .fc-one{left:0;right:auto;}
+    .fc-two{right:0;left:auto;bottom:5%;}
+    @media(max-width:900px){.cover-art{min-height:400px}.cover-art .reef{width:min(330px,76%)}.fc-one,.fc-two{width:min(210px,44%)}}
+    @media(max-width:620px){.cover-art{min-height:330px}.logo-plaque{top:4%;width:68%;padding:12px 16px}.cover-art .reef{width:min(260px,75%);bottom:4%}.fc-one,.fc-two{bottom:9%;width:44%;min-height:76px;padding:10px;font-size:11px}.fc-one strong,.fc-two strong{font-size:15px}.fc-two{bottom:0}}
+      .blueprint-legend{display:flex;gap:18px;flex-wrap:wrap;margin:-12px 0 16px;font-size:12px;color:var(--muted)}
+    .blueprint-legend span{display:inline-flex;align-items:center;gap:7px}.legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block}.legend-dot.user{background:var(--terracotta)}.legend-dot.front{background:var(--sea)}.legend-dot.back{background:var(--night)}.legend-dot.partner{background:var(--amber)}
+    .blueprint-shell{overflow:auto;border-radius:24px;border:1px solid #fff;background:#fffdf8;padding:12px;box-shadow:var(--shadow)}
+    .blueprint-table{width:1800px;table-layout:fixed;border-collapse:separate;border-spacing:5px;color:var(--night);font-size:12px;line-height:1.4}
+    .blueprint-table th,.blueprint-table td{vertical-align:top;text-align:left;padding:12px;background:#fbf8f0;border-radius:10px}
+    .blueprint-table thead th{background:#e8f0eb}
+    .blueprint-table .row-label{width:172px;position:sticky;left:0;z-index:3;background:#263c52;color:#fff;vertical-align:middle;text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+    .blueprint-table thead .row-label{background:#263c52}
+    .phase-row th:not(.row-label){text-align:center;background:#263c52;color:#fff;border-radius:10px 10px 4px 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:10px}
+    .stage-row th{height:85px}.stage-row small{display:block;color:var(--terracotta);font-size:10px;letter-spacing:.12em;margin-bottom:5px}.stage-row strong{font:600 16px/1.12 var(--serif);display:block}
+    .blueprint-table tbody th{width:172px;position:sticky;left:0;z-index:2;background:#f2e8d7;font:600 13px/1.25 var(--serif);border-left:4px solid var(--sea)}
+    .blueprint-table .lane-user th{border-color:var(--terracotta)}.blueprint-table .lane-touch th{border-color:var(--sea)}.blueprint-table .lane-cost th{border-color:var(--amber)}.blueprint-table .lane-front th{border-color:#5dacb1}.blueprint-table .lane-back th{border-color:#263c52}.blueprint-table .lane-support th{border-color:#8ca69a}.blueprint-table .lane-local th{border-color:#dfaa63}.blueprint-table .lane-provider th{border-color:#b96649}
+    .blueprint-table td{height:auto}.blueprint-table td:empty{background:#f5f0e6}.blueprint-table ul{margin:0;padding-left:15px}.blueprint-table li{margin:0 0 7px}.blueprint-table li:last-child{margin-bottom:0}
+    .bp-pills{display:flex;flex-direction:column;align-items:flex-start;gap:6px}.bp-pills span{display:inline-block;background:#eaf1ee;padding:5px 9px;border-radius:99px;color:#465a64;font-size:11px}
+    .bp-boxes{display:grid;gap:6px}.bp-boxes span{display:block;padding:8px 9px;border:1px solid #d9d4c9;border-radius:8px;background:#fffdf8}
+    @media(max-width:620px){.blueprint-shell{margin:0 -10px;padding:8px;border-radius:16px}.blueprint-table{width:1740px}.blueprint-table th,.blueprint-table td{padding:10px}.blueprint-table .row-label,.blueprint-table tbody th{width:150px}}
+    @media print{.blueprint-shell{overflow:visible;box-shadow:none}.blueprint-table{width:100%;font-size:7px;border-spacing:2px}.blueprint-table th,.blueprint-table td{padding:5px}.blueprint-table .row-label,.blueprint-table tbody th{width:90px}.stage-row strong{font-size:10px}}
+  
+  </style>
+<style>
+    /* Pirâmide da capa: marca no topo, sobrepondo os dois cards. */
+    .cover:after{z-index:0;pointer-events:none}
+    .cover>div{position:relative;z-index:1}
+    .cover-art.pyramid-art{min-height:430px;display:block;isolation:isolate}
+    .pyramid-card{position:absolute;top:218px;width:calc(50% - 18px);min-height:126px;padding:52px 18px 16px;background:#fffdf8ed;border:1px solid #fff;border-radius:20px;box-shadow:var(--shadow);color:var(--night);z-index:1}
+    .pyramid-left{left:0}.pyramid-right{right:0}
+    .pyramid-card strong{display:block;white-space:nowrap;font:600 clamp(14px,1.25vw,18px)/1.1 var(--serif);margin-bottom:7px}
+    .pyramid-card span{display:block;font-size:12.5px;line-height:1.4;color:#526273}
+    .pyramid-logo{position:absolute;z-index:2;top:175px;left:50%;transform:translateX(-50%);width:min(280px,58%);height:auto;filter:drop-shadow(0 7px 12px #263c5218)}
+    @media(max-width:900px){.cover-art.pyramid-art{min-height:400px}.pyramid-card{top:208px;width:calc(50% - 14px);padding:49px 14px 14px}.pyramid-logo{top:166px;width:min(260px,56%)}}
+    @media(max-width:620px){.cover-art.pyramid-art{min-height:330px}.pyramid-card{top:175px;width:calc(50% - 10px);min-height:112px;padding:43px 10px 12px;border-radius:16px}.pyramid-card strong{font-size:13px;letter-spacing:-.025em}.pyramid-card span{font-size:11px}.pyramid-logo{top:142px;width:min(220px,58%)}}
+    .video-showcase{padding:70px 0 82px;border-top:1px solid #263c5215}
+    .video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .video-card{min-width:0;background:var(--paper);border:1px solid #fff;border-radius:22px;padding:16px;box-shadow:var(--shadow)}
+    .video-card video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#172532;border-radius:14px}
+    .video-card h3{font:600 20px/1.15 var(--serif);margin:14px 2px 4px;color:var(--night)}
+    .video-card p{font-size:13px;color:var(--muted);margin:0 2px}
+    @media(max-width:900px){.video-grid{gap:12px}.video-card{padding:11px;border-radius:18px}.video-card h3{font-size:17px}}
+    @media(max-width:620px){.video-showcase{padding:56px 0}.video-grid{grid-template-columns:1fr;gap:14px}.video-card{padding:14px}.video-card h3{font-size:20px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Início da apresentação Coral"><img src="assets/logo-coral.png" alt="Logo Coral"></a>
+    <nav aria-label="Navegação da apresentação">
+      <a href="#problema">01 Problema</a><a href="#pesquisa">02 Pesquisa</a><a href="#proposta">03 Proposta</a><a href="#sistema">04 Sistema</a><a href="#blueprint">05 Blueprint</a><a href="#narrativa">06 Narrativa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cover" id="inicio">
+      <div>
+        <div class="eyebrow">Design de serviço · Recife e Olinda</div>
+        <h1>Coral — Descubra a cidade por quem vive nela.</h1>
+      <p class="tagline">Experiências locais com contexto para escolher e liberdade para mudar os planos.</p>
+        <p class="subline">Eulália Albuquerque · Maria Clara Carvalho · Rodrigo Pablo</p>
+        <div class="accent-line"></div>
+      </div>
+      <div class="cover-art pyramid-art" role="img" aria-label="A logo Coral acima de dois cards: recomendações de mulheres locais e organização da Maré">
+        <div class="pyramid-card pyramid-left"><strong>Por mulheres daqui</strong><span>Recomendações com origem visível</span></div>
+        <div class="pyramid-card pyramid-right"><strong>Maré</strong><span>Organiza e ajuda a reajustar</span></div>
+        <img class="pyramid-logo" src="assets/logo-coral.png" alt="Logo Coral">
+      </div>
+    </section>
+
+    <section class="section" id="problema">
+      <div class="container">
+        <div class="section-head"><div class="number">01</div><div><div class="eyebrow">Apresentação do problema · pitch</div><h2>Descobrir um rolê é fácil. Decidir se ele cabe na viagem é outra história.</h2><p class="section-intro">A equipe parte de uma fricção concreta: as recomendações estão espalhadas, o contexto para decidir é incompleto e o roteiro pode deixar de funcionar quando o clima, o tempo ou a disposição mudam.</p></div></div>
+        <div class="big-idea"><p>Mulheres que viajam querem conhecer a cidade além do roteiro turístico, mas precisam juntar dicas, conferir se ainda valem e entender como chegar e voltar antes de se sentirem prontas para escolher.</p><div class="side-mark">↗</div></div>
+        <div class="grid four">
+          <article class="card"><span class="label">O problema</span><h3>Informação fragmentada</h3><p>Vídeos, mapas, avaliações e dicas ficam em lugares diferentes; nem sempre é claro o que é relato sincero, publicidade ou informação atual.</p></article>
+          <article class="card"><span class="label">A proposta</span><h3>Coral + Maré</h3><p>Um catálogo curto e curado por pessoas locais, acompanhado de um agente que ajuda a organizar e adaptar o roteiro.</p></article>
+          <article class="card"><span class="label">Para quem</span><h3>Mulheres viajantes</h3><p>Mulheres brasileiras de 22 a 28 anos, viajando sozinhas ou com uma companhia, que buscam experiências autênticas com conforto.</p></article>
+          <article class="card"><span class="label">Como funciona</span><h3>Descobrir, decidir, ajustar</h3><p>Explorar recomendações com contexto, guardar rolês, montar a própria maré e reconsiderar planos quando algo muda.</p></article>
+        </div>
+        <div class="problem-list"><div><b>1 · Encontrar</b>Descobertas divididas entre redes, mapas e indicações.</div><div><b>2 · Confiar</b>É difícil avaliar autoria, atualização e conteúdo patrocinado.</div><div><b>3 · Entender</b>Faltam informações do entorno, acesso e retorno.</div><div><b>4 · Adaptar</b>Chuva, cansaço e distância podem desmontar o plano.</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="pesquisa">
+      <div class="container">
+        <div class="section-head"><div class="number">02</div><div><div class="eyebrow">Pesquisa com usuárias</div><h2>Inspiração, validação e autonomia aparecem juntas.</h2><p class="section-intro">A pesquisa reúne desk research, análise de concorrentes e entrevistas semiestruturadas. Os dados secundários ajudam a dimensionar o contexto; as entrevistas e personas orientam decisões de experiência, sem pretensão de representar todas as viajantes.</p></div></div>
+        <h3 class="subhead">O que a pesquisa secundária indica</h3>
+        <div class="grid four">
+          <article class="card stat-card"><strong>62,1%</strong><p>das mulheres disseram já ter deixado de viajar por segurança; 60,6% relataram insegurança durante uma viagem.</p><small>MTur e UNESCO, 2026 · 2.712 mulheres</small></article>
+          <article class="card stat-card"><strong>30–60 dias</strong><p>é uma janela frequente de planejamento de viagens domésticas no Brasil.</p><small>TRVL Lab/Panrotas, 2023 · cerca de 1.000 respondentes</small></article>
+          <article class="card stat-card"><strong>35%</strong><p>dos passeios e restaurantes podem ser decididos durante a viagem, segundo pesquisa brasileira.</p><small>Think with Google Brasil, 2022 · pesquisa e dados de busca</small></article>
+          <article class="card stat-card"><strong>46%</strong><p>dos viajantes globais pesquisados reservaram atividades já no destino.</p><small>Expedia Traveler Value Index, 2022 · 11.000 respondentes</small></article>
+        </div>
+        <div class="grid two" style="margin-top:16px">
+          <article class="card"><span class="label">Entrevistas compartilhadas pela equipe</span><h3>Dois contextos, necessidades que se cruzam</h3><p><b>Maria Luísa Marques:</b> viagem de seis dias com o parceiro, inspiração em redes sociais e checagem em mapas, comentários e avaliações. Relatou preocupação com publicidade disfarçada, localização e retorno; em Recife, mudou um plano por distância e pouco movimento.</p><p style="margin-top:12px"><b>Letícia Helena:</b> viagem solo de cerca de 22 dias pela Espanha e Itália. Pesquisa em Instagram, TikTok e YouTube, mas confere rotas manualmente; prioriza localização central, conforto e alternativas conforme cansaço, horário e movimento. Relatou erros de rota e transporte em respostas de IA.</p></article>
+          <article class="card"><span class="label">Síntese para o serviço</span><h3>Descobrir não encerra a decisão</h3><div class="evidence"><strong>Redes inspiram; outras fontes ajudam a conferir</strong><span>Autoria, atualidade e possível publicidade precisam estar mais claras.</span></div><div class="evidence"><strong>Entorno e deslocamento fazem parte do rolê</strong><span>Localização, movimento, distância e retorno pesam na escolha, sobretudo à noite.</span></div><div class="evidence"><strong>O roteiro precisa aceitar mudanças</strong><span>Clima, energia, orçamento e companhia podem alterar o plano durante a viagem.</span></div><div class="evidence"><strong>IA exige transparência e conferência</strong><span>Organizar opções ajuda, mas rotas, horários e informações práticas precisam de fontes e validação.</span></div></article>
+        </div>
+        <h3 class="subhead">Três personas sintetizadas a partir dos achados</h3>
+        <div class="persona-grid">
+          <article class="persona-card"><span class="persona-age">22 anos</span><h3>Júlia · viaja com uma amiga</h3><p>Gosta de descobrir lugares fora do roteiro tradicional, cafés, bares e eventos frequentados por moradores. Usa TikTok e Instagram para se inspirar e gosta de deixar espaço para decidir durante a viagem.</p><p><b>Frustrações:</b> muitas recomendações salvas e difíceis de organizar; conteúdo espalhado, patrocinado ou desatualizado; dúvida se o lugar é adequado para duas mulheres.</p><div class="chips"><span>Descoberta social</span><span>Decisão compartilhada</span><span>Autenticidade</span></div></article>
+          <article class="persona-card"><span class="persona-age">25 anos</span><h3>Marina · viaja com a parceira ou parceiro</h3><p>Prefere planejar uma parte da viagem, equilibrando lugares conhecidos e locais. Salva opções para escolher em conjunto conforme o humor e o tempo disponível.</p><p><b>Frustrações:</b> abrir muitas plataformas para uma atividade; avaliações contraditórias e recomendações repetitivas; descobrir tarde demais algo que gostaria de incluir.</p><div class="chips"><span>Planejamento flexível</span><span>Escolha em dupla</span><span>Variedade</span></div></article>
+          <article class="persona-card persona-selected"><span class="persona-age">28 anos · persona do storyboard</span><h3>Camila · viaja sozinha</h3><p>Valoriza autonomia para decidir horários e mudar o trajeto. Quer viver a cidade como quem mora nela e receber indicações de pessoas com experiência real no destino.</p><p><b>Frustrações:</b> recomendações sem contexto do entorno; insegurança sobre chegada e retorno; avaliações antigas ou sem autoria; precisar cruzar várias fontes antes de decidir.</p><div class="chips"><span>Autonomia</span><span>Contexto local</span><span>Confiança</span></div></article>
+        </div>
+        <p class="persona-rationale"><b>Por que Camila no storyboard?</b> A equipe escolheu essa persona para contar uma jornada mais detalhada e explorar mudanças de plano, contexto de deslocamento e autonomia. Júlia e Marina continuam compondo a compreensão do público do serviço.</p>
+        <div class="journey">
+          <article class="card"><span class="step">Antes da viagem</span><h3>Descobre e planeja</h3><p>Busca referências, verifica quem indicou, compara opções e salva rolês por dia e distância.</p><small>Necessidade: reduzir o esforço de pesquisa sem engessar o roteiro.</small></article>
+          <article class="card"><span class="step">Durante a estadia</span><h3>Confere e adapta</h3><p>Reavalia clima, horário, energia e deslocamento; muda a opção quando ela deixa de servir.</p><small>Necessidade: contexto útil no momento da decisão.</small></article>
+          <article class="card"><span class="step">Depois do rolê</span><h3>Avalia e compartilha</h3><p>Registra a experiência de forma simples e pode ajudar outras viajantes.</p><small>Necessidade: contribuição leve e retorno claro.</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proposta">
+      <div class="container">
+        <div class="section-head"><div class="number">03</div><div><div class="eyebrow">Proposta única de valor</div><h2>Uma descoberta local com contexto, curadoria e possibilidade de mudança.</h2></div></div>
+        <div class="big-idea"><p>Rolês de Recife e Olinda indicados por quem mora lá, com contexto para decidir com autonomia e uma assistente que organiza e ajuda a reajustar o roteiro durante a viagem.</p><div class="side-mark">✦</div></div>
+        <div class="quad">
+          <article class="card"><span class="label">O que vamos desenvolver?</span><h3>Um serviço de descoberta local</h3><p class="answer">Aplicativo web com catálogo curado em carrosséis e vídeos curtos, mais a assistente <strong>Maré</strong> para organizar os rolês salvos e sugerir ajustes.</p></article>
+          <article class="card"><span class="label">Que problema resolve?</span><h3>Pesquisa espalhada e decisão cansativa</h3><p class="answer">Reduz a fragmentação de dicas e ajuda a entender autoria, entorno, horários e deslocamento antes de escolher.</p></article>
+          <article class="card"><span class="label">Para quem e como?</span><h3>Mulheres que viajam</h3><p class="answer">Pensado para mulheres de 22 a 28 anos, sozinhas ou acompanhadas, com foco inicial em Recife e região metropolitana e recomendações de quem conhece o lugar.</p></article>
+          <article class="card"><span class="label">Em que consiste o serviço?</span><h3>Curadoria + tecnologia + comunidade</h3><p class="answer">Catálogo de rolês, informações práticas e de contexto, planejamento com a Maré, extras opcionais e avaliação pós-visita com pontos.</p></article>
+        </div>
+        <div class="service-stack"><span>Recomendações de locais</span><span>Vídeos curtos</span><span>Motivo da indicação</span><span>Entorno e selo contextual</span><span>Roteiro por dia e distância</span><span>Ajustes por clima e horário</span><span>Transfer opcional com motorista mulher</span><span>Rolês em grupo com guia</span><span>Avaliação e pontos</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="sistema">
+      <div class="container">
+        <div class="section-head"><div class="number">04</div><div><div class="eyebrow">Mapa do sistema</div><h2>Quem participa e o que circula ao longo do serviço.</h2></div></div>
+        <figure class="artifact-frame system-map-direct">
+          <div class="artifact-kicker">Ecossistema do serviço · versão da equipe</div>
+          <img src="assets/mapa-sistema-coral.png" alt="Mapa do sistema original: parceiros externos, prestadores, moradores, grupo de curadoria, aplicativo e etapas antes, durante e depois da viagem; linhas mostram fluxos de informação, financeiros e materiais.">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="blueprint">
+      <div class="container">
+        <div class="section-head"><div class="number">05</div><div><div class="eyebrow">Blueprint do serviço</div><h2>Da ação da viajante às operações que entregam o serviço.</h2></div></div>
+        <div class="blueprint-legend"><span><i class="legend-dot user"></i>Ações da viajante</span><span><i class="legend-dot front"></i>Linha de frente</span><span><i class="legend-dot back"></i>Bastidores e suporte</span><span><i class="legend-dot partner"></i>Parceiros externos</span></div>
+        <div class="blueprint-shell" role="region" aria-label="Blueprint do serviço; deslize horizontalmente para consultar todas as etapas" tabindex="0">
+          <table class="blueprint-table">
+            <thead>
+              <tr class="phase-row"><th class="row-label" rowspan="2">Jornada</th><th colspan="1">Bastidores · contínuo</th><th colspan="3">Antes da viagem</th><th colspan="3">Durante a estadia</th><th colspan="1">Depois</th></tr>
+              <tr class="stage-row">
+                <th><small>00</small><strong>Base curada</strong></th><th><small>01</small><strong>Descobre o app</strong></th><th><small>02</small><strong>Pesquisa rolês<br>em Recife</strong></th><th><small>03</small><strong>Seleciona e<br>salva rolês</strong></th><th><small>04</small><strong>Organiza locais<br>com o agente</strong></th><th><small>05</small><strong>Acompanha e<br>reajusta</strong></th><th><small>06</small><strong>Vive o rolê</strong></th><th><small>07</small><strong>Fechamento e<br>recompensas</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="lane-user"><th scope="row">Ações da viajante</th>
+                <td></td><td><ul><li>Pesquisa rolês no buscador</li><li>Abre o site pelo link</li><li>Vê rolês indicados por locais</li></ul></td><td><ul><li>Busca rolês em Recife</li><li>Filtra por companhia e dia</li></ul></td><td><ul><li>Assiste aos vídeos curtos</li><li>Confere quem recomendou</li><li>Vê entorno e selo</li><li>Toca em salvar e cria conta</li></ul></td><td><ul><li>Informa datas e hospedagem</li><li>Pede ao agente para organizar</li><li>Ajusta e salva o roteiro</li><li>Contrata extras, se quiser</li></ul></td><td><ul><li>Recebe sugestão de ajuste</li><li>Aceita ou pede outra opção</li></ul></td><td><ul><li>Chega e paga no local</li><li>Vai de transfer ou em grupo</li><li>Volta para a hospedagem</li></ul></td><td><ul><li>Avalia em 1–2 toques</li><li>Troca pontos por cupons</li></ul></td>
+              </tr>
+              <tr class="lane-touch"><th scope="row">Pontos de contato</th>
+                <td></td><td><div class="bp-pills"><span>Buscador</span><span>Site do app</span><span>Indicação</span></div></td><td><div class="bp-pills"><span>Lista curada</span><span>Filtro de companhia</span></div></td><td><div class="bp-pills"><span>Card do rolê</span><span>Vídeo curto</span><span>Selo de segurança</span><span>Cadastro</span><span>Lista de salvos</span></div></td><td><div class="bp-pills"><span>Roteiro no mapa</span><span>Evento no calendário</span><span>Chat do agente</span></div></td><td><div class="bp-pills"><span>Notificação</span><span>Calendário atualizado</span></div></td><td><div class="bp-pills"><span>Entorno na tela</span><span>Transfer</span></div></td><td><div class="bp-pills"><span>Pedido de avaliação</span><span>Resumo da viagem</span><span>Cupom 99/Uber</span></div></td>
+              </tr>
+              <tr class="lane-cost"><th scope="row">Gratuito × pago</th>
+                <td></td><td>Grátis, sem login</td><td>Grátis, sem login</td><td>Grátis · conta pedida ao salvar</td><td>Agente grátis com limite de mensagens · extras pagos</td><td></td><td>Extras pagos: transfer e rolê em grupo</td><td>Grátis · pontos viram desconto</td>
+              </tr>
+              <tr class="lane-front"><th scope="row">Linha de frente · app e agente de IA</th>
+                <td><div class="bp-boxes"><span>Página do rolê publicada</span></div></td><td><div class="bp-boxes"><span>Página do rolê aberta, sem login</span><span>Rolês indicados por locais</span></div></td><td><div class="bp-boxes"><span>Lista curta e curada</span><span>Motivo de cada indicação</span></div></td><td><div class="bp-boxes"><span>Cards com fotos e avaliações</span><span>Vídeos curtos no showcase</span><span>Entorno, selo e data</span><span>Cadastro curto ao salvar</span></div></td><td><div class="bp-boxes"><span>Perfil da viagem</span><span>Agente agrupa por dia e distância</span><span>Mapa e calendário integrados</span><span>Oferta de extras pagos</span></div></td><td><div class="bp-boxes"><span>Agente monitora clima e horário</span><span>1 troca principal, perto</span></div></td><td><div class="bp-boxes"><span>Entorno e volta visíveis</span><span>Atalho para o transfer</span></div></td><td><div class="bp-boxes"><span>Mensagens do agente</span><span>Catálogo personalizado</span><span>Carteira de pontos</span></div></td>
+              </tr>
+              <tr class="lane-back"><th scope="row">Backstage · nós (curadoria)</th>
+                <td><div class="bp-boxes"><span>Analisa indicações pelos critérios</span><span>Cura os vídeos</span><span>Publica a página do rolê</span><span>Mantém horários e endereços</span><span>Revisa o que a comunidade sinaliza</span><span>Gere parcerias de desconto</span></div></td><td></td><td></td><td></td><td><div class="bp-boxes"><span>Monta grupos e transfers</span></div></td><td><div class="bp-boxes"><span>Corrige o que fechou ou mudou</span></div></td><td><div class="bp-boxes"><span>Acompanha grupos e transfers</span></div></td><td><div class="bp-boxes"><span>Avaliações voltam à curadoria</span></div></td>
+              </tr>
+              <tr class="lane-support"><th scope="row">Suporte · sistemas</th>
+                <td><div class="bp-boxes"><span>Formulário de indicação</span><span>Painel da curadoria</span></div></td><td><div class="bp-boxes"><span>Site indexável (SEO)</span><span>Link rastreável</span></div></td><td><div class="bp-boxes"><span>Base curada</span><span>Busca e filtros</span></div></td><td><div class="bp-boxes"><span>Hospedagem de vídeos</span><span>Dados de entorno e selo</span><span>Conta e perfil</span><span>Consentimento LGPD</span></div></td><td><div class="bp-boxes"><span>IA só com base curada</span><span>Limite de mensagens</span><span>Pagamento dos extras</span></div></td><td><div class="bp-boxes"><span>Localização</span><span>Notificações com limite</span></div></td><td></td><td><div class="bp-boxes"><span>Pontos e antifraude</span><span>Integração com parceiros</span></div></td>
+              </tr>
+              <tr class="lane-local"><th scope="row">Parceiros externos · locais recomendam</th>
+                <td><div class="bp-boxes"><span>Indicam rolês para a curadoria</span></div></td><td><div class="bp-boxes"><span>Indicam o app no boca a boca</span></div></td><td></td><td><div class="bp-boxes"><span>Nome aparece no card</span></div></td><td></td><td></td><td></td><td><div class="bp-boxes"><span>Ganham pontos quando o rolê é usado</span></div></td>
+              </tr>
+              <tr class="lane-provider"><th scope="row">Prestadores e parceiros</th>
+                <td><div class="bp-boxes"><span>Ofertam o rolê</span></div></td><td></td><td></td><td></td><td><div class="bp-boxes"><span>Confirmam vagas no grupo</span></div></td><td></td><td><div class="bp-boxes"><span>Atendem e recebem no local</span><span>Motoristas mulheres no transfer</span><span>Guia do rolê em grupo</span><span>Pagam comissão</span></div></td><td><div class="bp-boxes"><span>99/Uber e restaurantes dão desconto</span></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="narrativa">
+      <div class="container">
+        <div class="section-head"><div class="number">06</div><div><div class="eyebrow">Representação gráfica da entrega do serviço</div><h2>Uma jornada em oito quadros.</h2><p class="section-intro">Camila descobre a Coral, escolhe um rolê, muda o plano quando a chuva chega, vive uma experiência coberta e devolve à comunidade uma avaliação.</p></div></div>
+        <div class="story-grid">
+          <article class="story"><img src="assets/cena-1-atualizada.png" alt="Camila encontra a Coral como resultado orgânico no celular em casa"><div class="story-copy"><span class="story-n">Cena 01 · Descoberta</span><h3>Camila encontra a Coral</h3><p>Enquanto pesquisa um planejador de viagens no celular, Camila encontra o resultado da Coral e percebe que pode descobrir rolês indicados por pessoas que vivem na cidade.</p><div class="meta"><span>Buscador</span><span>Link para o serviço</span></div></div></article>
+          <article class="story"><img src="assets/cena-2.webp" alt="Camila explora o catálogo inicial da Coral"><div class="story-copy"><span class="story-n">Cena 02 · Acesso</span><h3>Explora o catálogo</h3><p>Camila abre o app e percorre o catálogo inicial: categorias de rolê, cards locais e recomendações para aquela tarde. A tela que abre é o catálogo, não um chat.</p><div class="meta"><span>Catálogo</span><span>Sem login para explorar</span></div></div></article>
+          <article class="story"><img src="assets/cena-3.webp" alt="Camila consulta a ficha do Box Vitória Régia"><div class="story-copy"><span class="story-n">Cena 03 · Escolha</span><h3>Confere o Box Vitória Régia</h3><p>Antes de guardar o rolê, Camila consulta a ficha, vê o que esperar do local e considera se ele combina com o momento da viagem.</p><div class="meta"><span>Ficha do rolê</span><span>Autoria e entorno</span></div></div></article>
+          <article class="story"><img src="assets/cena-4.webp" alt="Camila pede à Maré para organizar o roteiro"><div class="story-copy"><span class="story-n">Cena 04 · Planejamento</span><h3>Organiza o roteiro com a Maré</h3><p>Camila informa os dias e a hospedagem, pede à assistente para organizar os rolês guardados e confere a proposta antes de decidir.</p><div class="meta"><span>Roteiro por dia</span><span>Mapa e calendário</span></div></div></article>
+          <article class="story"><img src="assets/cena-5.webp" alt="Camila recebe um alerta de chuva no hotel"><div class="story-copy"><span class="story-n">Cena 05 · Reajuste pelo clima</span><h3>A chuva muda o plano</h3><p>Com chuva prevista e o Box Vitória Régia ao ar livre, Camila recebe um alerta e considera a alternativa coberta do Parraxaxá.</p><div class="meta"><span>Notificação</span><span>Opção coberta</span></div></div></article>
+          <article class="story"><img src="assets/cena-6.webp" alt="Camila chega de transfer sob chuva com guarda-chuva aberto"><div class="story-copy"><span class="story-n">Cena 06 · Transfer</span><h3>Chega ao restaurante</h3><p>Camila desembarca do carro com um guarda-chuva aberto. A motorista parceira permanece no lado dianteiro esquerdo, posição do volante do veículo.</p><div class="meta"><span>Transfer opcional</span><span>Chuva moderada</span></div></div></article>
+          <article class="story"><img src="assets/cena-7.webp" alt="Camila faz uma refeição sozinha no restaurante coberto"><div class="story-copy"><span class="story-n">Cena 07 · Experiência</span><h3>Aproveita a experiência</h3><p>Em um ambiente coberto, Camila faz a refeição sozinha e aproveita o rolê sem que a chuva interrompa a noite.</p><div class="meta"><span>Experiência local</span><span>Ambiente coberto</span></div></div></article>
+          <article class="story"><img src="assets/cena-8.webp" alt="Camila avalia a experiência e recebe pontos"><div class="story-copy"><span class="story-n">Cena 08 · Pós-serviço</span><h3>Avalia e recebe pontos</h3><p>De volta ao hotel, Camila registra sua avaliação em poucos toques. O retorno contribui com a comunidade e rende pontos para benefícios.</p><div class="meta"><span>Avaliação</span><span>Recompensas</span></div></div></article>
+        </div>
+        <div class="end-card"><div><h3>A ideia é que o resultado ultrapasse a simples ação de encontrar um lugar</h3><p>É poder escolher com mais contexto, manter autonomia quando os planos mudam e transformar a própria experiência em informação útil para outras viajantes.</p></div><div class="coral-dot">✦</div></div>
+      </div>
+    </section>
+
+    <section class="sources" id="fontes">
+      <div class="container">
+        <div class="eyebrow">Referências consultadas</div><h2>Materiais do projeto</h2>
+        <div class="source-list">
+          <a href="https://github.com/RodrigoPabloMelo/service-design" target="_blank" rel="noreferrer">Repositório do projeto<small>Visão do serviço, pesquisa, personas, jornada e decisões do protótipo</small></a>
+          <a href="https://docs.google.com/document/d/10v3-4H-c8GtFooZqVepHGrt7WwHa9egGBHh7xBcK_N8/edit" target="_blank" rel="noreferrer">Estrutura narrativa do serviço<small>Personagem, situação-problema e etapas da história</small></a>
+          <a href="https://docs.google.com/document/d/1qpPol9lBi3n4cW6uQHB60FF6cWX-Qywsiu74_XZdTwc/edit" target="_blank" rel="noreferrer">Entrevista · Maria Luísa Marques<small>Viagem acompanhada, pesquisa de locais e validação de informações</small></a>
+          <a href="https://docs.google.com/document/d/1BfSFKr39PsnrHbtXPpmzIyh7qXDpMWt9RQd3is0s-D4/edit" target="_blank" rel="noreferrer">Entrevista · Letícia Helena<small>Viagem solo, planejamento, deslocamento, conforto e segurança</small></a>
+          <div>Blueprint do serviço · v2</div>
+          <div>Brand Book Coral<small>Identidade, voz, paleta e diretrizes para segurança contextual</small></div>
+          <div>Mapa do sistema</div>
+          <a href="https://drive.google.com/drive/folders/1SOXwq22YTUgvgucWUo0pd8Tl-P9tGfsQ" target="_blank" rel="noreferrer">Pasta Design de Serviços · Coral<small>Storyboard e estrutura narrativa</small></a>
+          <a href="https://www.figma.com/board/SmNbTckfvjZnvMSx5hvWHK/Board---Design-de-Servi%C3%A7os?node-id=81-1047" target="_blank" rel="noreferrer">Board de Design de Serviços<small>Síntese de pesquisa, personas, jornada e mapa do sistema</small></a>
+        </div>
+        <p class="small-note">Direção visual baseada no Brand Book: areia #F2E8D7, azul-noite #263C52, terracota #B96649, azul-mar #5DACB1, coral #FA8370; Fraunces para títulos e DM Sans para leitura.</p>
+      </div>
+    </section>
+    <section class="video-showcase" id="cenas-em-video">
+      <div class="container">
+        <div class="section-head"><div class="number">▶</div><div><div class="eyebrow">Storyboard em movimento</div><h2>Cenas em vídeo</h2><p class="section-intro">Os momentos da jornada apresentados em sequência.</p></div></div>
+        <div class="video-grid">
+          <article class="video-card"><video controls playsinline preload="metadata" aria-label="Vídeo das cenas 1 a 4"><source src="assets/video-cenas-1-a-4.mp4" type="video/mp4">Seu navegador não consegue reproduzir este vídeo.</video><h3>Cenas 1 a 4</h3><p>Descoberta, exploração, escolha e planejamento.</p></article>
+          <article class="video-card"><video controls playsinline preload="metadata" aria-label="Vídeo da cena 5"><source src="assets/video-cena-5-atualizado.mp4" type="video/mp4">Seu navegador não consegue reproduzir este vídeo.</video><h3>Cena 5</h3><p>Imprevisto e reajuste pelo clima.</p></article>
+          <article class="video-card"><video controls playsinline preload="metadata" aria-label="Vídeo da cena 8"><source src="assets/video-cena-8.mp4" type="video/mp4">Seu navegador não consegue reproduzir este vídeo.</video><h3>Cena 8</h3><p>Avaliação da experiência e fechamento.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><span><b>Coral</b> · Descubra a cidade por quem vive nela.</span><span>Design de serviço · 2026</span></footer>
+  <button class="to-top" aria-label="Voltar ao início" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <script>
+
+    const sections=[...document.querySelectorAll('main section[id], .section[id]')];
+    const links=[...document.querySelectorAll('.topbar nav a')];
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.hash==='#'+entry.target.id))}}),{rootMargin:'-28% 0px -62% 0px'});
+    sections.forEach(section=>observer.observe(section));
+  </script>
+</body>
+</html>
